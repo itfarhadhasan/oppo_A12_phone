@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Make A Website Using HTML CSS And JavaScript </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+            <div class="menu">
+                <nav>
+                    <div class="logo">
+                        <img src="img/oppo.png" alt="">
+                    </div>
+                    <div class="nav-link">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Phone</a></li>
+                            <li><a href="#">Accessoriec</a></li>
+                            <li><a href="#">Cart</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="information">
+                    <div class="overlay"></div>
+                    <img src="img/Oppo_A12.png" class="mobile" alt="">
+                    <div id="circle">
+                        <div class="feature one">
+                            <img src="img/camera.png" alt="">
+                            <div>
+                                <h1>camera</h1>
+                                <p>13 MP, Wide Angle Lens</p>
+                            </div>
+                        </div>
+                        <div class="feature two">
+                            <img src="img/processor.png" alt="">
+                            <div>
+                                <h1>Processor</h1>
+                                <p>Speed up to 2.3GHz</p>
+                            </div>
+                        </div>
+                        <div class="feature three">
+                            <img src="img/display.png" alt="">
+                            <div>
+                                <h1>display</h1>
+                                <p>6.22"  creen-to-body ratio</p>
+                            </div>
+                        </div>
+                        <div class="feature four">
+                            <img src="img/battery.png" alt="">
+                            <div>
+                                <h1>battery Life</h1>
+                                <p>Li-Po 4230 mAh,up to 17 hours⁵</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control">
+                    <img src="img/arrow.png" alt="" id="up">
+                    <h3>Features</h3>
+                    <img src="img/arrow.png" alt="" id="down">
+                </div>
+            </div>
+
+
+
+            <script>
+                var circle = document.getElementById("circle");
+                var up = document.getElementById("up");
+                var down = document.getElementById("down");
+
+
+                var rotateValue = circle.style.transform;
+                var rotateSum;
+
+                up.onclick = function(){
+                    rotateSum = rotateValue + "rotate(-90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue =   rotateSum;
+                    
+                    }
+
+                down.onclick = function(){
+                    rotateSum = rotateValue + "rotate(90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue =   rotateSum;
+                    
+                    }
+            </script>
+
+</body>
+</html>
